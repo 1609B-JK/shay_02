@@ -1,12 +1,19 @@
 package com.jk.service.user;
 
-import com.jk.pojo.user.User;
+import com.jk.pojo.user.UserRequest;
+import com.jk.pojo.user.UserResponse;
 
-import java.util.List;
+import java.util.Map;
 
 /**
  * Created by apple on 2017/5/23.
  */
 public interface UserService {
-    List<User> selectUserList();
+
+    Map<String,Object> login(UserRequest userRequest);
+
+    UserResponse selectUserByUserAccount(UserRequest userRequest);
+
+    int regedit(UserRequest userRequest);
+
 }

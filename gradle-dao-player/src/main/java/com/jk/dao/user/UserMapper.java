@@ -1,6 +1,7 @@
 package com.jk.dao.user;
 
-import com.jk.pojo.user.User;
+import com.jk.pojo.user.UserRequest;
+import com.jk.pojo.user.UserResponse;
 
 import java.util.List;
 
@@ -8,5 +9,9 @@ import java.util.List;
  * Created by apple on 2017/5/23.
  */
 public interface UserMapper {
-    List<User> selectUserList();
+
+    UserResponse login(UserRequest userRequest);
+
+    void insertUser(UserRequest userRequest);
+
 }
